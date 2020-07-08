@@ -1,0 +1,9 @@
+FROM python:3.6
+RUN mkdir /code
+
+RUN pip install numpy \ pandas \ sklearn \ flask
+
+ADD . /code
+WORKDIR /code
+
+CMD ["python3.6","myapp.py"]
